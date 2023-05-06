@@ -5,11 +5,11 @@ class TextObj {
 private:
 	sf::Font font;
 	sf::Text text;
-
 public:
-	TextObj(sf::Vector2f pos) {
-		font.loadFromFile(FONT_FILE_NAME);
+	TextObj(std::string str, sf::Vector2f pos) {
+		font.loadFromFile(TEXT_FONT_FILE);
 		text.setFont(font);
+		text.setString(str);
 		text.setCharacterSize(FONT_SIZE);
 		text.setPosition(pos);
 	}

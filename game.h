@@ -1,8 +1,8 @@
 #pragma once
 #include "settings.h"
 #include "player.h"
+#include "apple.h"
 #include <vector>
-#include <list>
 
 class Game {
 public:
@@ -21,7 +21,9 @@ public:
 	}
 private:
 	sf::RenderWindow window;
-	//Player player;
+	Player player;
+	Apple apple;
+	TextOdj pointText;
 
 	void checkEvents() {
 		sf::Event event;
@@ -32,7 +34,7 @@ private:
 	}
 
 	void update() {
-		//player.update();
+		player.update();
 	}
 
 	void checkCollisions() {}
@@ -40,6 +42,7 @@ private:
 	void draw()
 	{
 		window.clear();
+		player.draw(window);
 		window.display();
 	}
 };

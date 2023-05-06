@@ -35,5 +35,8 @@
     <ClInclude Include="Text.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="apple.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
